@@ -1,0 +1,85 @@
+body{
+    position: relative;
+}
+h1{
+    color: rgb(0, 128, 128);
+}
+h2{
+    color: rgb(203 14 250);
+}
+button {
+    padding: 12px;
+    width: 108px;
+    margin-top: 30px;
+    margin-left: 50px;
+    outline: none;
+    border: 1px solid black;
+    border: none;
+    border-radius: 40px;
+    background: #FBBC05;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+    font-family: arial black;
+    position: relative;
+    z-index: 1;
+}
+button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #302d2d;
+    border-radius: 40px;
+    z-index: -1;
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+    transform-origin: 0% 10% 0;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+button:hover:before{
+    transform: scaleX(1);
+    transition-timing-function:cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+button:hover{
+    color: #F39E34;
+}
+.boxMain{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 500px;
+    margin: auto;
+    text-align: center;
+    background: #ddd;
+    opacity: 0;
+    border-radius: 20px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+.boxMain i {
+    float: right;
+    font-size: 20px;
+    padding: 10px;
+}
+.boxContainer{
+    text-align: center;
+}
+.boxContainer h3{
+    margin-top: 50px;
+    font-size: 23px;
+}
+.popUp{
+    top: 700px;;
+    opacity: 1;
+}
